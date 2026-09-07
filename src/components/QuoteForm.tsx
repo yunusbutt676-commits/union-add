@@ -14,18 +14,19 @@ import SuccessMessage from "./SuccessMessage";
 import { useRouter } from "next/navigation";
 
 export default function QuoteForm() {
-  const {
+    const {
     register,
     handleSubmit,
     formState: { errors },
-    } = useForm<QuoteFormData>({
-      resolver: zodResolver(quoteSchema),
-      mode: "onBlur",
-      defaultValues: {
-        budget: {
-          currency: "USD",
-        },
+  } = useForm<QuoteFormData>({
+    resolver: zodResolver(quoteSchema),
+    mode: "onBlur",
+    defaultValues: {
+      website: "",
+      budget: {
+        currency: "USD",
       },
+    },
   });
 
   const router = useRouter();

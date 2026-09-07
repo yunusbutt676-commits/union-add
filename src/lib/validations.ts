@@ -120,14 +120,12 @@ export const quoteSchema = z
         ]),
 
         amount: z
-          .number({
-            invalid_type_error:
-              "Budget must be a number.",
-          })
+          .number()
           .positive(
             "Budget must be greater than 0."
           ),
       })
+
       .superRefine(
         (budget, ctx) => {
           if (
@@ -161,10 +159,8 @@ export const quoteSchema = z
       ),
 
     timeline: z
-      .number({
-        invalid_type_error:
-          "Timeline must be a number of days.",
-      })
+      .number()
+      
       .int(
         "Timeline must be a whole number."
       )
@@ -189,11 +185,8 @@ export const quoteSchema = z
         "Project description cannot exceed 3000 characters."
       ),
 
-    website: z
-      .string()
-      .max(0)
-      .optional()
-      .default(""),
+    website: z.string().max(0),
+
   })
   .superRefine((data, ctx) => {
 

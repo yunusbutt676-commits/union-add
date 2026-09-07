@@ -8,13 +8,18 @@ import { useRouter } from "next/navigation";
 interface SuccessMessageProps {
   form: {
     name: string;
-    company: string;
+    company?: string;
     email: string;
-    phone: string;
-    service: string;
-    budget: string;
-    timeline: string;
+    phone?: string;
+    country?: string;
+    service?: string;
+    budget: {
+      currency: "USD" | "PKR";
+      amount: number;
+    };
+    timeline: number;
     description: string;
+    website?: string;
   };
 }
 
