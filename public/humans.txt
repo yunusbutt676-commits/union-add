@@ -1,0 +1,32 @@
+/* TEAM */
+
+Company: Union Add
+Website: https://unionadd.com
+Location: Lahore, Pakistan
+
+Services:
+- Branding
+- Digital Marketing
+- Google Ads
+- Meta Ads
+- SEO
+- Website Development
+- Mobile Apps
+- Media Buying
+- Video Production
+- Creative Design
+
+Tech Stack:
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- MongoDB Atlas
+- Vercel
+- Cloudflare
+- Resend
+
+Contact:
+info@unionadd.com
+
+© 2026 Union Add
