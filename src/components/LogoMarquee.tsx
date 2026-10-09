@@ -8,9 +8,6 @@ type BrandLogo = {
 
 const logos: BrandLogo[] = [
   { src: "/sk.webp", alt: "SK" },
-  { src: "/taimoor.jfif", alt: "Taimoor" },
-  { src: "/walton.jfif", alt: "Walton" },
-  { src: "/cantt.jfif", alt: "Cantt" },
   { src: "/acpl.webp", alt: "ACPL" },
   { src: "/advtelecom.jpg", alt: "AdvTelecom" },
   { src: "/airlifts.png", alt: "Airlift" },
