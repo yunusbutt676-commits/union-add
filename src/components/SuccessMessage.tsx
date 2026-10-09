@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from "next/link";
 import { HiCheckCircle } from "react-icons/hi";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface SuccessMessageProps {
@@ -23,55 +24,90 @@ interface SuccessMessageProps {
   };
 }
 
-export default function SuccessMessage({ form, }: SuccessMessageProps) {
+const REDIRECT_SECONDS = 30;
+
+export default function SuccessMessage({
+  form,
+}: SuccessMessageProps) {
   const router = useRouter();
-  const [seconds, setSeconds] = useState(30);
-  
-  const whatsapp =
-  `*New Quote Request*\n\n` +
-  
-  `*Name:* ${form.name}\n` +
-  `*Company:* ${form.company}\n` +
-  `*Email:* ${form.email}\n` +
-  `*Phone:* ${form.phone}\n` +
-  `*Country:* ${form.country}\n` +
-  `*Service:* ${form.service}\n` +
-  `*Budget:* ${form.budget}\n` +
-  `*Timeline:* ${form.timeline}\n\n` +
+  const [seconds, setSeconds] = useState(REDIRECT_SECONDS);
 
-  `*Message:*\n` +
-  `${form.description}`;
+  const whatsappUrl = useMemo(() => {
+    const phone = (
+      process.env.NEXT_PUBLIC_CEO_WHATSAPP ?? ""
+    ).replace(/\D/g, "");
 
-  const whatsappUrl = `https://wa.me/${
-    process.env.NEXT_PUBLIC_CEO_WHATSAPP
-  }?text=${encodeURIComponent(whatsapp)}`;
+    if (!phone) return null;
+
+    const budget = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: form.budget.currency,
+      maximumFractionDigits: 0,
+    }).format(form.budget.amount);
+
+    const message = [
+      "*New Quote Request*",
+      "",
+      `*Name:* ${form.name}`,
+      `*Company:* ${form.company || "Not provided"}`,
+      `*Email:* ${form.email}`,
+      `*Phone:* ${form.phone || "Not provided"}`,
+      `*Country:* ${form.country || "Not provided"}`,
+      `*Service:* ${form.service || "Not specified"}`,
+      `*Budget:* ${budget}`,
+      `*Timeline:* ${form.timeline}`,
+      `*Website:* ${form.website || "Not provided"}`,
+      "",
+      "*Project Description:*",
+      form.description,
+    ].join("\n");
+
+    return `https://wa.me/${phone}?text=${encodeURIComponent(
+      message
+    )}`;
+  }, [form]);
 
   useEffect(() => {
-    if (seconds === 0) {
+    if (seconds <= 0) {
       router.replace("/");
       return;
     }
 
-    const timer = setTimeout(() => {
-      setSeconds((prev) => prev - 1);
+    const timer = window.setTimeout(() => {
+      setSeconds((previous) => Math.max(0, previous - 1));
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => window.clearTimeout(timer);
   }, [seconds, router]);
+
+  const progress =
+    ((REDIRECT_SECONDS - seconds) / REDIRECT_SECONDS) * 100;
 
   return (
     <section
+      aria-labelledby="quote-success-heading"
       className="
-        min-h-screen
         flex
+        min-h-screen
+        w-full
+        min-w-0
         items-center
         justify-center
-        px-5
-        py-20
+        overflow-x-clip
+
         bg-gradient-to-br
         from-white
         via-[#FAFAFA]
         to-[#FFF7F2]
+
+        px-4
+        py-24
+
+        sm:px-6
+        sm:py-28
+
+        lg:px-8
+
         dark:from-[#070707]
         dark:via-[#0D0D0D]
         dark:to-[#151515]
@@ -80,190 +116,449 @@ export default function SuccessMessage({ form, }: SuccessMessageProps) {
       <div
         className="
           w-full
+          min-w-0
           max-w-3xl
-          rounded-[32px]
+
+          rounded-2xl
           border
           border-gray-200
-          dark:border-zinc-800
+
           bg-white/90
-          dark:bg-[#111]/90
-          backdrop-blur-xl
-          shadow-2xl
-          p-8
-          md:p-14
+
+          px-5
+          py-8
+
           text-center
+
+          shadow-xl
+          backdrop-blur-xl
+
+          sm:rounded-[28px]
+          sm:px-8
+          sm:py-10
+
+          md:rounded-[32px]
+          md:p-14
+
+          dark:border-zinc-800
+          dark:bg-[#111]/90
+          dark:shadow-black/30
         "
       >
-        {/* Badge */}
-
-        <span
+        {/* SUCCESS BADGE */}
+        <div
           className="
+            mb-6
             inline-flex
+            max-w-full
             items-center
+            justify-center
             gap-2
+
             rounded-full
+
             bg-green-100
-            dark:bg-green-900/20
-            text-green-600
-            px-5
+
+            px-4
             py-2
-            text-sm
+
+            text-xs
             font-semibold
-            mb-8
+            text-green-700
+
+            sm:mb-8
+            sm:px-5
+            sm:text-sm
+
+            dark:bg-green-900/20
+            dark:text-green-400
           "
         >
-          ✓ Quote Request Submitted
-        </span>
+          <HiCheckCircle
+            aria-hidden="true"
+            className="shrink-0 text-base"
+          />
 
-        {/* Icon */}
+          <span>Quote Request Submitted</span>
+        </div>
 
+        {/* SUCCESS ICON */}
         <HiCheckCircle
+          aria-hidden="true"
           className="
             mx-auto
+            mb-6
+
+            text-6xl
             text-green-500
-            text-7xl
+
+            sm:mb-8
+            sm:text-7xl
+
             md:text-8xl
-            mb-8
           "
         />
 
-        {/* Heading */}
+        {/* HEADING */}
+        <h1
+          id="quote-success-heading"
+          className="
+            break-words
 
-        <h1 className="text-4xl md:text-6xl font-bold text-black dark:text-white">
-          Thank You{form.name ? `, ${form.name}` : ""}!
+            text-3xl
+            font-bold
+            leading-tight
+            tracking-tight
+
+            text-gray-950
+
+            sm:text-4xl
+            md:text-5xl
+            lg:text-6xl
+
+            dark:text-white
+          "
+        >
+          Thank You
+          {form.name ? `, ${form.name}` : ""}!
         </h1>
 
-        {/* Description */}
+        {/* DESCRIPTION */}
+        <p
+          className="
+            mx-auto
+            mt-6
+            max-w-2xl
 
-        <p className="mt-8 text-lg md:text-xl leading-9 text-gray-600 dark:text-gray-400">
+            text-sm
+            leading-7
+
+            text-gray-600
+
+            sm:mt-8
+            sm:text-base
+            sm:leading-8
+
+            md:text-lg
+            md:leading-9
+
+            dark:text-gray-300
+          "
+        >
           Your quote request has been received successfully.
-
-          <br />
-          <br />
-     
-          A confirmation email has been sent to your email address.
-
-          <br />
-
-          Our team will carefully review your project requirements
-          and contact you within
-
+          {" "}
+          Our team will carefully review your project
+          requirements and contact you within{" "}
           <span className="font-semibold text-orange-500">
-            {" "}24 business hours.
+            24 business hours.
           </span>
         </p>
 
-        {/* Progress */}
+        {/* REDIRECT PROGRESS */}
+        <div
+          className="
+            mx-auto
+            mt-8
+            max-w-xl
 
-        <div className="mt-10">
-          <div className="h-2 rounded-full overflow-hidden bg-gray-200 dark:bg-zinc-800">
+            sm:mt-10
+          "
+        >
+          <div
+            role="progressbar"
+            aria-label="Time until homepage redirect"
+            aria-valuemin={0}
+            aria-valuemax={REDIRECT_SECONDS}
+            aria-valuenow={REDIRECT_SECONDS - seconds}
+            className="
+              h-2
+              overflow-hidden
+              rounded-full
+
+              bg-gray-200
+              dark:bg-zinc-800
+            "
+          >
             <div
-              className="h-full bg-orange-500 transition-all duration-1000"
+              className="
+                h-full
+                rounded-full
+                bg-orange-500
+
+                transition-[width]
+                duration-1000
+                ease-linear
+
+                motion-reduce:transition-none
+              "
               style={{
-                width: `${((30 - seconds) / 30) * 100}%`,
+                width: `${progress}%`,
               }}
             />
           </div>
 
-          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p
+            className="
+              mt-4
+              text-xs
+              text-gray-500
+
+              sm:text-sm
+
+              dark:text-gray-400
+            "
+          >
             Redirecting to Home in{" "}
-            <span className="font-semibold text-orange-500">
+            <span
+              className="
+                font-semibold
+                tabular-nums
+                text-orange-500
+              "
+            >
               {seconds}s
             </span>
           </p>
         </div>
 
-        {/* What's Next */}
-
+        {/* WHAT HAPPENS NEXT */}
         <div
           className="
-            mt-10
+            mt-8
             rounded-2xl
+
             border
             border-gray-200
-            dark:border-zinc-800
+
             bg-gray-50
-            dark:bg-[#181818]
-            p-6
+
+            p-5
             text-left
+
+            sm:mt-10
+            sm:p-6
+
+            dark:border-zinc-800
+            dark:bg-[#181818]
           "
         >
-          <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">
-            What happens next?
-          </h3>
+          <h2
+            className="
+              mb-4
+              text-base
+              font-semibold
 
-          <ul className="space-y-3 text-gray-600 dark:text-gray-400">
-            <li>✓ Your request has been securely received.</li>
-            <li>✓ A confirmation email has been sent to your email address.</li>
-            <li>✓ Our experts will review your project.</li>
-            <li>✓ We'll contact you within 24 business hours.</li>
+              text-gray-950
+
+              sm:text-lg
+
+              dark:text-white
+            "
+          >
+            What happens next?
+          </h2>
+
+          <ul
+            className="
+              space-y-3
+              text-sm
+              leading-6
+
+              text-gray-600
+
+              sm:text-base
+              sm:leading-7
+
+              dark:text-gray-300
+            "
+          >
+            <li className="flex items-start gap-3">
+              <HiCheckCircle
+                aria-hidden="true"
+                className="
+                  mt-1
+                  shrink-0
+                  text-green-500
+                "
+              />
+              <span>
+                Your request has been securely received.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <HiCheckCircle
+                aria-hidden="true"
+                className="
+                  mt-1
+                  shrink-0
+                  text-green-500
+                "
+              />
+              <span>
+                Our experts will review your project requirements.
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <HiCheckCircle
+                aria-hidden="true"
+                className="
+                  mt-1
+                  shrink-0
+                  text-green-500
+                "
+              />
+              <span>
+                We'll contact you within 24 business hours.
+              </span>
+            </li>
           </ul>
         </div>
 
-        {/* Buttons */}
+        {/* ACTION BUTTONS */}
+        <div
+          className="
+            mt-8
+            flex
+            w-full
+            flex-col
+            justify-center
+            gap-3
 
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              flex
-              items-center
-              justify-center
-              px-8
-              py-4
-              rounded-full
-              bg-green-600
-              text-white
-              font-semibold
-              hover:bg-green-700
-              transition-all
-              duration-300
-              hover:scale-105
-              sm:hidden
-            "
-          >
-            Continue on WhatsApp
-          </a>
+            sm:mt-12
+            sm:flex-row
+            sm:flex-wrap
+            sm:gap-4
+          "
+        >
+          {/* WHATSAPP - MOBILE */}
+          {whatsappUrl && (
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                min-h-12
+                w-full
+                items-center
+                justify-center
+
+                rounded-full
+
+                bg-green-600
+
+                px-5
+                py-3
+
+                text-center
+                text-sm
+                font-semibold
+                text-white
+
+                transition-all
+                duration-300
+
+                hover:bg-green-700
+
+                active:scale-[0.98]
+
+                focus-visible:outline-2
+                focus-visible:outline-offset-3
+                focus-visible:outline-green-500
+
+                sm:hidden
+              "
+            >
+              Continue on WhatsApp
+            </a>
+          )}
+
+          {/* HOME */}
           <Link
             href="/"
             className="
               flex
+              min-h-12
+              w-full
               items-center
               justify-center
-              px-8
-              py-4
+
               rounded-full
+
               bg-[#071A2E]
-              text-white
+
+              px-6
+              py-3
+
+              text-center
+              text-sm
               font-semibold
-              hover:bg-orange-500
+              text-white
+
               transition-all
               duration-300
-              hover:scale-105
+
+              hover:bg-orange-500
+
+              active:scale-[0.98]
+
+              focus-visible:outline-2
+              focus-visible:outline-offset-3
+              focus-visible:outline-orange-500
+
+              sm:w-auto
+              sm:px-8
+              sm:text-base
             "
           >
             Back to Home
           </Link>
 
+          {/* SERVICES */}
           <Link
             href="/services"
             className="
               flex
+              min-h-12
+              w-full
               items-center
               justify-center
-              px-8
-              py-4
+
               rounded-full
+
               border
               border-gray-300
-              dark:border-zinc-700
+
+              px-6
+              py-3
+
+              text-center
+              text-sm
               font-semibold
-              hover:border-orange-500
-              hover:text-orange-500
+
+              text-gray-900
+
               transition-all
               duration-300
+
+              hover:border-orange-500
+              hover:text-orange-500
+
+              active:scale-[0.98]
+
+              focus-visible:outline-2
+              focus-visible:outline-offset-3
+              focus-visible:outline-orange-500
+
+              sm:w-auto
+              sm:px-8
+              sm:text-base
+
+              dark:border-zinc-700
+              dark:text-white
+              dark:hover:text-orange-400
             "
           >
             Explore Services

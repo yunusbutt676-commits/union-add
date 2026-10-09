@@ -3,7 +3,7 @@ import Script from "next/script";
 import QuoteForm from "../../components/QuoteForm";
 
 export const metadata: Metadata = {
-  title: "Get a Quote | Union Add",
+  title: "Get a Quote",
   description:
     "Request a free quote from Union Add for advertising, branding, digital marketing, web development, mobile apps, SEO, media buying and creative services in Pakistan.",
   keywords: [

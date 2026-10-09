@@ -6,7 +6,7 @@ import Portfolio from "../../sections/Portfolio";
 
 export const metadata: Metadata = {
   title:
-    "Portfolio | Advertising, Digital Marketing & Creative Work | Union Add",
+    "Portfolio | Advertising, Digital Marketing & Creative Work",
 
   description:
     "Explore Union Add's portfolio of advertising, digital marketing, SEO, branding, web development, media planning, outdoor advertising, creative design, video production and brand activation solutions in Pakistan.",

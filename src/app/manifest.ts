@@ -1,18 +1,24 @@
+
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    id: "/",
+
     name: "Union Add",
     short_name: "Union Add",
+
     description:
       "Union Add is a full-service advertising, branding, digital marketing, web/app development, media buying, and creative agency based in Lahore, Pakistan.",
 
     start_url: "/",
     scope: "/",
+
     display: "standalone",
-    orientation: "portrait",
-    background_color: "#ffffff",
-    theme_color: "#f97316",
+    display_override: ["standalone", "minimal-ui"],
+
+    background_color: "#071A2E",
+    theme_color: "#071A2E",
 
     lang: "en",
     dir: "ltr",
@@ -35,11 +41,13 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icon.png",
         sizes: "512x512",
         type: "image/png",
+        purpose: "any",
       },
       {
         src: "/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
+        purpose: "any",
       },
     ],
 
@@ -48,45 +56,21 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Services",
         short_name: "Services",
         url: "/services",
-        icons: [
-          {
-            src: "/icon.png",
-            sizes: "192x192",
-          },
-        ],
       },
       {
         name: "Portfolio",
         short_name: "Portfolio",
         url: "/portfolio",
-        icons: [
-          {
-            src: "/icon.png",
-            sizes: "192x192",
-          },
-        ],
       },
       {
         name: "Get a Quote",
         short_name: "Quote",
         url: "/get-a-quote",
-        icons: [
-          {
-            src: "/icon.png",
-            sizes: "192x192",
-          },
-        ],
       },
       {
         name: "Contact",
         short_name: "Contact",
         url: "/contact",
-        icons: [
-          {
-            src: "/icon.png",
-            sizes: "192x192",
-          },
-        ],
       },
     ],
   };

@@ -1,58 +1,60 @@
+
 import type { MetadataRoute } from "next";
 
+const baseUrl = "https://unionadd.com";
+
+const routes = [
+  {
+    path: "",
+    changeFrequency: "weekly",
+    priority: 1.0,
+  },
+  {
+    path: "/about",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    path: "/services",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    path: "/portfolio",
+    changeFrequency: "weekly",
+    priority: 0.9,
+  },
+  {
+    path: "/ai",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/contact",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    path: "/get-a-quote",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    path: "/privacy-policy",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+  {
+    path: "/terms-of-service",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://unionadd.com";
-
-  const currentDate = new Date();
-
-  return [
-    {
-      url: `${baseUrl}/`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/portfolio`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/get-a-quote`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

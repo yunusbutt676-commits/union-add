@@ -42,6 +42,54 @@ interface PortfolioProject {
 
 const projects: PortfolioProject[] = [
   {
+    id: "shop-board-branding",
+    title: "Shop Board Branding",
+    category: "Shop Board Branding",
+    description:
+      "Retail branding and shop board solutions designed to strengthen physical brand presence and customer recognition.",
+    image: "/shopb.jpeg",
+    alt: "Union Add shop board branding project",
+    services: [
+      "Retail Branding",
+      "Outdoor Branding",
+      "Creative Design",
+      "Brand Visibility",
+    ],
+    featured: true,
+  },
+  {
+    id: "billboards",
+    title: "Billboards",
+    category: "Bill Boards",
+    description:
+      "Large-format billboard advertising designed for strong visibility, memorable creative communication and strategic outdoor reach.",
+    image: "/billb.jpeg",
+    alt: "Union Add billboard advertising campaign",
+    services: [
+      "Billboard Advertising",
+      "Outdoor Media",
+      "Creative Design",
+      "Media Planning",
+    ],
+    featured: true,
+  },
+  {
+    id: "bus-branding",
+    title: "Bus Branding",
+    category: "Buss Branding",
+    description:
+      "Large-scale mobile advertising campaigns that transform public transport into high-visibility brand communication platforms.",
+    image: "/bus.jpeg",
+    alt: "Union Add bus branding advertising campaign",
+    services: [
+      "Transit Advertising",
+      "Outdoor Media",
+      "Brand Visibility",
+      "Campaign Creative",
+    ],
+    featured: true,
+  },
+  {
     id: "website-development",
     title: "Website Development",
     category: "Website Development",
@@ -58,7 +106,6 @@ const projects: PortfolioProject[] = [
     ],
     featured: true,
   },
-
   {
     id: "mobile-app-development",
     title: "Mobile App Development",
@@ -76,7 +123,6 @@ const projects: PortfolioProject[] = [
     ],
     featured: true,
   },
-
   {
     id: "digital-media-marketing",
     title: "Digital Media Marketing",
@@ -94,7 +140,147 @@ const projects: PortfolioProject[] = [
     ],
     featured: true,
   },
-
+  {
+    id: "graphic-design",
+    title: "Graphic Design",
+    category: "Graphic Design",
+    description:
+      "Professional visual communication including campaign creatives, brand graphics, promotional designs and digital marketing assets.",
+    image: "/graphic.jpeg",
+    alt: "Union Add graphic design campaign",
+    services: [
+      "Brand Design",
+      "Campaign Creatives",
+      "Social Media Design",
+      "Marketing Materials",
+    ],
+    featured: true,
+  },
+  {
+    id: "video-production",
+    title: "Video Production",
+    category: "Video Production",
+    description:
+      "Creative video production for advertising campaigns, social media, corporate communication, promotional content and brand storytelling.",
+    image: "/videop.jpeg",
+    alt: "Union Add video production and advertising project",
+    services: [
+      "Video Production",
+      "Commercials",
+      "Editing",
+      "Motion Graphics",
+      "Brand Storytelling",
+    ],
+  },
+  {
+    id: "bus-stand-branding",
+    title: "Bus Stand Branding",
+    category: "Bus Stand Branding",
+    description:
+      "High-visibility outdoor advertising campaigns designed to place brands in front of targeted audiences across high-traffic locations.",
+    image: "/busstand.jpeg",
+    alt: "Union Add bus stand branding advertising campaign",
+    services: [
+      "Outdoor Advertising",
+      "Brand Visibility",
+      "Campaign Planning",
+      "Creative Design",
+    ],
+    featured: true,
+  },
+  {
+    id: "floats-activity",
+    title: "Floats Activity",
+    category: "Floats Activity",
+    description:
+      "Mobile brand activation campaigns that take promotional experiences directly to audiences in high-footfall and high-visibility areas.",
+    image: "/floats.jpeg",
+    alt: "Union Add floats activity brand activation campaign",
+    services: [
+      "Brand Activation",
+      "Outdoor Campaigns",
+      "Promotional Activity",
+      "Audience Engagement",
+    ],
+    featured: true,
+  },
+  {
+    id: "digital-streamers",
+    title: "Digital Streamers",
+    category: "Digital Streamers",
+    description:
+      "Digital streamer advertising solutions designed for strong visual impact, campaign awareness and strategic outdoor brand communication.",
+    image: "/dstreamers.jpeg",
+    alt: "Union Add digital streamer advertising campaign",
+    services: [
+      "Outdoor Media",
+      "Digital Advertising",
+      "Creative Production",
+      "Brand Awareness",
+    ],
+    featured: true,
+  },
+  {
+    id: "print-media",
+    title: "Print Media",
+    category: "Print Media",
+    description:
+      "Strategic print advertising and creative production for businesses seeking targeted offline communication and brand visibility.",
+    image: "/news.jpeg",
+    alt: "Union Add print media advertising campaign",
+    services: [
+      "Print Advertising",
+      "Creative Design",
+      "Campaign Planning",
+      "Media Placement",
+    ],
+    featured: true,
+  },
+  {
+    id: "media-planning",
+    title: "Media Planning",
+    category: "Media Planning",
+    description:
+      "Data-informed media planning designed to align audiences, channels, campaign objectives, budgets and advertising reach.",
+    image: "/mediasp.jpeg",
+    alt: "Union Add media planning and advertising strategy project",
+    services: [
+      "Media Strategy",
+      "Audience Planning",
+      "Budget Planning",
+      "Campaign Optimization",
+    ],
+  },
+  {
+    id: "tvc-production",
+    title: "TVC Production",
+    category: "TVC Production",
+    description:
+      "Television commercial production combining creative direction, production planning, visual storytelling and brand communication.",
+    image: "/tvc.jpeg",
+    alt: "Union Add television commercial production project",
+    services: [
+      "TVC Production",
+      "Creative Direction",
+      "Production",
+      "Brand Storytelling",
+    ],
+  },
+  {
+    id: "satellite-media-buying",
+    title: "Media Buying on Satellite",
+    category: "Media Buying on Satellite",
+    description:
+      "Strategic satellite media buying designed to connect brands with relevant audiences through television advertising placements.",
+    image: "/satellite.jpeg",
+    alt: "Union Add satellite media buying campaign",
+    services: [
+      "Media Buying",
+      "Satellite Advertising",
+      "Campaign Planning",
+      "Audience Reach",
+    ],
+  },
   {
     id: "seo",
     title: "Search Engine Optimization",
@@ -112,7 +298,6 @@ const projects: PortfolioProject[] = [
     ],
     featured: true,
   },
-
   {
     id: "ui-ux-design",
     title: "UI/UX Design",
@@ -128,201 +313,8 @@ const projects: PortfolioProject[] = [
       "Design Systems",
       "Prototyping",
     ],
+    featured: true,
   },
-
-  {
-    id: "graphic-design",
-    title: "Graphic Design",
-    category: "Graphic Design",
-    description:
-      "Professional visual communication including campaign creatives, brand graphics, promotional designs and digital marketing assets.",
-    image: "/graphic.jpeg",
-    alt: "Union Add graphic design campaign",
-    services: [
-      "Brand Design",
-      "Campaign Creatives",
-      "Social Media Design",
-      "Marketing Materials",
-    ],
-  },
-
-  {
-    id: "video-production",
-    title: "Video Production",
-    category: "Video Production",
-    description:
-      "Creative video production for advertising campaigns, social media, corporate communication, promotional content and brand storytelling.",
-    image: "/videop.jpeg",
-    alt: "Union Add video production and advertising project",
-    services: [
-      "Video Production",
-      "Commercials",
-      "Editing",
-      "Motion Graphics",
-      "Brand Storytelling",
-    ],
-  },
-
-  {
-    id: "bus-stand-branding",
-    title: "Bus Stand Branding",
-    category: "Bus Stand Branding",
-    description:
-      "High-visibility outdoor advertising campaigns designed to place brands in front of targeted audiences across high-traffic locations.",
-    image: "/busstand.jpeg",
-    alt: "Union Add bus stand branding advertising campaign",
-    services: [
-      "Outdoor Advertising",
-      "Brand Visibility",
-      "Campaign Planning",
-      "Creative Design",
-    ],
-  },
-
-  {
-    id: "floats-activity",
-    title: "Floats Activity",
-    category: "Floats Activity",
-    description:
-      "Mobile brand activation campaigns that take promotional experiences directly to audiences in high-footfall and high-visibility areas.",
-    image: "/floats.jpeg",
-    alt: "Union Add floats activity brand activation campaign",
-    services: [
-      "Brand Activation",
-      "Outdoor Campaigns",
-      "Promotional Activity",
-      "Audience Engagement",
-    ],
-  },
-
-  {
-    id: "digital-streamers",
-    title: "Digital Streamers",
-    category: "Digital Streamers",
-    description:
-      "Digital streamer advertising solutions designed for strong visual impact, campaign awareness and strategic outdoor brand communication.",
-    image: "/dstreamers.jpeg",
-    alt: "Union Add digital streamer advertising campaign",
-    services: [
-      "Outdoor Media",
-      "Digital Advertising",
-      "Creative Production",
-      "Brand Awareness",
-    ],
-  },
-
-  {
-    id: "print-media",
-    title: "Print Media",
-    category: "Print Media",
-    description:
-      "Strategic print advertising and creative production for businesses seeking targeted offline communication and brand visibility.",
-    image: "/news.jpeg",
-    alt: "Union Add print media advertising campaign",
-    services: [
-      "Print Advertising",
-      "Creative Design",
-      "Campaign Planning",
-      "Media Placement",
-    ],
-  },
-
-  {
-    id: "media-planning",
-    title: "Media Planning",
-    category: "Media Planning",
-    description:
-      "Data-informed media planning designed to align audiences, channels, campaign objectives, budgets and advertising reach.",
-    image: "/mediasp.jpeg",
-    alt: "Union Add media planning and advertising strategy project",
-    services: [
-      "Media Strategy",
-      "Audience Planning",
-      "Budget Planning",
-      "Campaign Optimization",
-    ],
-  },
-
-  {
-    id: "tvc-production",
-    title: "TVC Production",
-    category: "TVC Production",
-    description:
-      "Television commercial production combining creative direction, production planning, visual storytelling and brand communication.",
-    image: "/tvc.jpeg",
-    alt: "Union Add television commercial production project",
-    services: [
-      "TVC Production",
-      "Creative Direction",
-      "Production",
-      "Brand Storytelling",
-    ],
-  },
-
-  {
-    id: "satellite-media-buying",
-    title: "Media Buying on Satellite",
-    category: "Media Buying on Satellite",
-    description:
-      "Strategic satellite media buying designed to connect brands with relevant audiences through television advertising placements.",
-    image: "/satellite.jpeg",
-    alt: "Union Add satellite media buying campaign",
-    services: [
-      "Media Buying",
-      "Satellite Advertising",
-      "Campaign Planning",
-      "Audience Reach",
-    ],
-  },
-
-  {
-    id: "shop-board-branding",
-    title: "Shop Board Branding",
-    category: "Shop Board Branding",
-    description:
-      "Retail branding and shop board solutions designed to strengthen physical brand presence and customer recognition.",
-    image: "/shopb.jpeg",
-    alt: "Union Add shop board branding project",
-    services: [
-      "Retail Branding",
-      "Outdoor Branding",
-      "Creative Design",
-      "Brand Visibility",
-    ],
-  },
-
-  {
-    id: "billboards",
-    title: "Billboards",
-    category: "Bill Boards",
-    description:
-      "Large-format billboard advertising designed for strong visibility, memorable creative communication and strategic outdoor reach.",
-    image: "/billb.jpeg",
-    alt: "Union Add billboard advertising campaign",
-    services: [
-      "Billboard Advertising",
-      "Outdoor Media",
-      "Creative Design",
-      "Media Planning",
-    ],
-  },
-
-  {
-    id: "bus-branding",
-    title: "Bus Branding",
-    category: "Buss Branding",
-    description:
-      "Large-scale mobile advertising campaigns that transform public transport into high-visibility brand communication platforms.",
-    image: "/bus.jpeg",
-    alt: "Union Add bus branding advertising campaign",
-    services: [
-      "Transit Advertising",
-      "Outdoor Media",
-      "Brand Visibility",
-      "Campaign Creative",
-    ],
-  },
-
   {
     id: "cable-advertisement",
     title: "Cable Advertisement",
@@ -338,7 +330,6 @@ const projects: PortfolioProject[] = [
       "Audience Targeting",
     ],
   },
-
   {
     id: "brand-activation",
     title: "Brand Activation & Event Management",
@@ -355,7 +346,6 @@ const projects: PortfolioProject[] = [
     ],
     featured: true,
   },
-
   {
     id: "photoshoot-designing",
     title: "Photoshoot & Designing",
@@ -371,7 +361,6 @@ const projects: PortfolioProject[] = [
       "Campaign Assets",
     ],
   },
-
   {
     id: "public-relations",
     title: "Public Relations",
@@ -387,7 +376,6 @@ const projects: PortfolioProject[] = [
       "Reputation Management",
     ],
   },
-
   {
     id: "giveaways",
     title: "Giveaways",
@@ -402,8 +390,8 @@ const projects: PortfolioProject[] = [
       "Brand Activation",
       "Audience Engagement",
     ],
+    featured: true,
   },
-
   {
     id: "offset-printing",
     title: "Offset Printing",
@@ -418,18 +406,18 @@ const projects: PortfolioProject[] = [
       "Print Production",
       "Creative Design",
     ],
+    featured: true,
   },
 ];
 
-const categories = [
+const categories: Array<"All" | PortfolioCategory> = [
   "All",
   ...Array.from(new Set(projects.map((project) => project.category))),
-] as ("All" | PortfolioCategory)[];
+];
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] =
     useState<"All" | PortfolioCategory>("All");
-
   const [search, setSearch] = useState("");
 
   const filteredProjects = useMemo(() => {
@@ -437,12 +425,9 @@ export default function Portfolio() {
 
     return projects.filter((project) => {
       const matchesCategory =
-        activeCategory === "All" ||
-        project.category === activeCategory;
+        activeCategory === "All" || project.category === activeCategory;
 
-      if (!query) {
-        return matchesCategory;
-      }
+      if (!query) return matchesCategory;
 
       const searchableText = [
         project.title,
@@ -457,9 +442,7 @@ export default function Portfolio() {
     });
   }, [activeCategory, search]);
 
-  const featuredProjects = projects.filter(
-    (project) => project.featured
-  );
+  const featuredProjects = projects.filter((project) => project.featured);
 
   const portfolioSchema = {
     "@context": "https://schema.org",
@@ -494,9 +477,8 @@ export default function Portfolio() {
   return (
     <main
       id="portfolio"
-      className="min-h-screen bg-white text-[#071A2E] dark:bg-[#0B0B0F] dark:text-white"
+      className="min-h-screen overflow-x-hidden bg-[#F6F7F9] text-[#102033] dark:bg-[#090D14] dark:text-white"
     >
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -507,83 +489,128 @@ export default function Portfolio() {
       {/* Hero */}
       <section
         aria-labelledby="portfolio-heading"
-        className="relative overflow-hidden px-6 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40"
+        className="relative isolate overflow-hidden bg-[#071A2E] px-4 pb-12 pt-28 text-white sm:px-6 sm:pb-16 sm:pt-36 lg:px-10 lg:pb-24 lg:pt-40"
       >
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(249,115,22,0.12),transparent_35%)]"
+          className="pointer-events-none absolute -right-32 -top-20 h-80 w-80 rounded-full bg-orange-500/20 blur-3xl sm:h-[34rem] sm:w-[34rem]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-44 -left-24 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"
         />
 
-        <div className="mx-auto max-w-7xl">
+        <div className="relative mx-auto max-w-7xl">
           <div className="max-w-4xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-orange-300 backdrop-blur sm:text-xs">
+              <span className="h-2 w-2 rounded-full bg-orange-400" />
               Our Portfolio
-            </p>
+            </span>
 
             <h1
               id="portfolio-heading"
-              className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl"
+              className="mt-6 max-w-4xl text-[clamp(2.45rem,8vw,5.5rem)] font-bold leading-[1.08] tracking-tight"
             >
               Creative work built for{" "}
-              <span className="text-orange-500">
-                real-world impact.
-              </span>
+              <span className="text-orange-400">real-world impact.</span>
             </h1>
 
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-300 sm:text-xl">
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:mt-7 sm:text-lg sm:leading-8">
               Explore Union Add&apos;s advertising, branding, digital
               marketing, technology, media, creative production and
               communication capabilities.
             </p>
 
-            <div
-              className="mt-10 flex flex-wrap gap-4"
-              aria-label="Portfolio statistics"
-            >
-              <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-5 py-4 dark:border-zinc-800 dark:bg-zinc-900/70">
-                <strong className="block text-2xl">
-                  {projects.length}
-                </strong>
-                <span className="text-sm text-zinc-500">
-                  Service categories
-                </span>
-              </div>
-
-              <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-5 py-4 dark:border-zinc-800 dark:bg-zinc-900/70">
-                <strong className="block text-2xl">
-                  {featuredProjects.length}
-                </strong>
-                <span className="text-sm text-zinc-500">
-                  Featured capabilities
-                </span>
-              </div>
-
-              <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-5 py-4 dark:border-zinc-800 dark:bg-zinc-900/70">
-                <strong className="block text-2xl">
-                  360°
-                </strong>
-                <span className="text-sm text-zinc-500">
-                  Advertising solutions
-                </span>
-              </div>
+            <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+              <a
+                href="#portfolio-explorer"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 text-sm font-bold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Explore our work <span aria-hidden="true">↗</span>
+              </a>
+              <Link
+                href="/get-a-quote"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 text-sm font-bold text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Start a project
+              </Link>
             </div>
+          </div>
+
+          <div
+            className="mt-10 grid grid-cols-3 gap-2 sm:mt-14 sm:max-w-2xl sm:gap-4"
+            aria-label="Portfolio statistics"
+          >
+            {[
+              { value: projects.length, label: "Service categories" },
+              {
+                value: featuredProjects.length,
+                label: "Featured capabilities",
+              },
+              { value: "360°", label: "Advertising solutions" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.07] p-3 backdrop-blur sm:p-5"
+              >
+                <strong className="block text-xl font-bold sm:text-3xl">
+                  {stat.value}
+                </strong>
+                <span className="mt-1 block text-[10px] leading-4 text-slate-300 sm:text-sm">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Portfolio Explorer */}
+      {/* Search and category navigation */}
       <section
-        aria-labelledby="portfolio-explorer"
-        className="border-y border-zinc-200 bg-zinc-50/70 px-6 py-8 dark:border-zinc-800 dark:bg-zinc-900/30 sm:px-8 lg:px-12"
+        id="portfolio-explorer"
+        aria-labelledby="portfolio-explorer-heading"
+        className="scroll-mt-6 border-b border-slate-200 bg-white dark:border-white/10 dark:bg-[#101720]"
       >
-        <div className="mx-auto max-w-7xl">
-          <h2 id="portfolio-explorer" className="sr-only">
-            Explore Union Add portfolio
-          </h2>
+        <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-7 lg:px-10">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-orange-500">
+                Find a capability
+              </p>
+              <h2
+                id="portfolio-explorer-heading"
+                className="mt-1 text-xl font-bold tracking-tight sm:text-2xl"
+              >
+                Explore what we do
+              </h2>
+            </div>
+
+            <label className="relative block w-full lg:max-w-sm">
+              <span className="sr-only">Search portfolio services</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-4-4" />
+              </svg>
+              <input
+                type="search"
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Search services..."
+                className="min-h-12 w-full rounded-xl border border-slate-200 bg-[#F6F7F9] py-3 pl-11 pr-4 text-base text-[#102033] outline-none transition placeholder:text-slate-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-500"
+              />
+            </label>
+          </div>
 
           <div
-            className="flex flex-wrap items-center gap-2"
-            aria-label="Portfolio categories and search"
+            className="-mx-4 mt-5 flex gap-2 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-6 sm:px-6 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0"
+            aria-label="Filter portfolio by category"
           >
             {categories.map((category) => {
               const active = activeCategory === category;
@@ -593,130 +620,87 @@ export default function Portfolio() {
                   key={category}
                   type="button"
                   aria-pressed={active}
-                  onClick={() =>
-                    setActiveCategory(
-                      category as "All" | PortfolioCategory
-                    )
-                  }
-                  className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-medium transition ${
+                  onClick={() => setActiveCategory(category)}
+                  className={`min-h-10 shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-xs font-semibold transition sm:text-sm ${
                     active
-                      ? "border-orange-500 bg-orange-500 text-white"
-                      : "border-zinc-300 bg-white text-zinc-700 hover:border-orange-400 hover:text-orange-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+                      ? "border-orange-500 bg-orange-500 text-white shadow-md shadow-orange-500/20"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-orange-400 hover:text-orange-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
                   }`}
                 >
                   {category}
                 </button>
               );
             })}
-
-            {/* Search */}
-            <label className="w-full sm:w-[220px]">
-              <span className="sr-only">
-                Search portfolio services
-              </span>
-
-              <input
-                type="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search Services..."
-                aria-label="Search portfolio services"
-                className="
-                  w-full
-                  rounded-full
-                  border
-                  border-zinc-300
-                  bg-white
-                  px-5
-                  py-2.5
-                  text-sm
-                  text-zinc-900
-                  outline-none
-                  transition
-                  placeholder:text-zinc-400
-                  focus:border-orange-500
-                  focus:ring-2
-                  focus:ring-orange-500/20
-                  dark:border-zinc-700
-                  dark:bg-zinc-900
-                  dark:text-white
-                  dark:placeholder:text-zinc-500
-                "
-              />
-            </label>
           </div>
         </div>
       </section>
 
-      {/* Portfolio Grid */}
+      {/* Portfolio cards */}
       <section
         aria-labelledby="portfolio-projects"
-        className="px-6 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex items-end justify-between gap-6">
+          <div className="mb-7 flex flex-col gap-3 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-500">
                 Selected Capabilities
               </p>
-
               <h2
                 id="portfolio-projects"
-                className="text-3xl font-bold tracking-tight sm:text-4xl"
+                className="mt-2 scroll-mt-8 text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl"
               >
                 Advertising, digital & creative work
               </h2>
             </div>
-
-            <p className="hidden text-sm text-zinc-500 sm:block">
+            <p
+              className="text-sm font-medium text-slate-500 dark:text-slate-400"
+              aria-live="polite"
+            >
               Showing {filteredProjects.length}{" "}
-              {filteredProjects.length === 1
-                ? "category"
-                : "categories"}
+              {filteredProjects.length === 1 ? "category" : "categories"}
             </p>
           </div>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
               {filteredProjects.map((project) => (
                 <article
                   key={project.id}
-                  className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-zinc-800 dark:bg-zinc-900"
+                  className="group flex min-w-0 flex-col overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-[0_8px_32px_rgba(7,26,46,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(7,26,46,0.12)] dark:border-white/10 dark:bg-[#111B27]"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
                     <Image
                       src={project.image}
                       alt={project.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 33vw"
                       className="object-cover transition duration-700 group-hover:scale-105"
                     />
-
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 pt-16">
-                      <span className="rounded-full bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-4 pt-14 sm:p-5">
+                      <span className="inline-block max-w-full rounded-full border border-white/20 bg-black/50 px-3 py-1.5 text-[11px] font-semibold text-white backdrop-blur-sm">
                         {project.category}
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="flex items-center justify-between gap-3">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-orange-500">
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <div className="flex min-h-6 items-center justify-between gap-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-orange-500">
                         Union Add
                       </p>
-
                       {project.featured && (
-                        <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 text-[11px] font-semibold text-orange-500">
+                        <span className="rounded-full bg-orange-50 px-2.5 py-1 text-[10px] font-bold text-orange-600 dark:bg-orange-500/10 dark:text-orange-400">
                           Featured
                         </span>
                       )}
                     </div>
 
-                    <h3 className="mt-3 text-xl font-bold">
+                    <h3 className="mt-3 text-xl font-bold leading-snug tracking-tight">
                       {project.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                    <p className="mt-2.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
                       {project.description}
                     </p>
 
@@ -727,7 +711,7 @@ export default function Portfolio() {
                       {project.services.map((service) => (
                         <li
                           key={service}
-                          className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                          className="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-medium text-slate-600 dark:bg-white/[0.07] dark:text-slate-300"
                         >
                           {service}
                         </li>
@@ -738,13 +722,13 @@ export default function Portfolio() {
                       href={`/get-a-quote?service=${encodeURIComponent(
                         project.category
                       )}`}
-                      className="mt-6 inline-flex items-center font-semibold text-orange-500 transition hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-4 dark:focus:ring-offset-zinc-900"
                       aria-label={`Discuss ${project.title} with Union Add`}
+                      className="mt-6 flex min-h-11 items-center justify-between gap-3 rounded-xl bg-[#071A2E] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 dark:bg-orange-500 dark:hover:bg-orange-600"
                     >
                       Discuss a Similar Project
                       <span
                         aria-hidden="true"
-                        className="ml-2 transition-transform group-hover:translate-x-1"
+                        className="text-lg transition-transform group-hover:translate-x-1"
                       >
                         →
                       </span>
@@ -754,22 +738,26 @@ export default function Portfolio() {
               ))}
             </div>
           ) : (
-            <div className="rounded-3xl border border-dashed border-zinc-300 px-6 py-20 text-center dark:border-zinc-700">
-              <h3 className="text-xl font-semibold">
+            <div className="rounded-3xl border border-dashed border-slate-300 bg-white px-5 py-16 text-center dark:border-white/15 dark:bg-[#111B27]">
+              <div
+                aria-hidden="true"
+                className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-2xl text-orange-500 dark:bg-orange-500/10"
+              >
+                ⌕
+              </div>
+              <h3 className="mt-5 text-xl font-bold">
                 No matching services found
               </h3>
-
-              <p className="mt-2 text-zinc-500">
+              <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
                 Try another service or search term.
               </p>
-
               <button
                 type="button"
                 onClick={() => {
                   setActiveCategory("All");
                   setSearch("");
                 }}
-                className="mt-6 rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
+                className="mt-6 min-h-11 rounded-xl bg-orange-500 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
               >
                 View All
               </button>
@@ -778,99 +766,93 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Services SEO Section */}
+      {/* All services */}
       <section
         aria-labelledby="portfolio-services"
-        className="bg-[#071A2E] px-6 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
+        className="bg-[#071A2E] px-4 py-14 text-white sm:px-6 sm:py-20 lg:px-10 lg:py-24"
       >
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
-            <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
-                Full-Service Agency
-              </p>
-
-              <h2
-                id="portfolio-services"
-                className="text-3xl font-bold sm:text-4xl"
-              >
-                Advertising, marketing, media and digital solutions
-              </h2>
-
-              <p className="mt-5 max-w-xl leading-7 text-zinc-300">
-                Union Add combines traditional advertising, modern
-                digital marketing, technology, creative production and
-                media solutions to help businesses build visibility,
-                communicate effectively and reach the right audiences.
-              </p>
-            </div>
-
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {categories
-                .filter((category) => category !== "All")
-                .map((category) => (
-                  <li key={category}>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setActiveCategory(category);
-
-                        requestAnimationFrame(() => {
-                          document
-                            .getElementById("portfolio-projects")
-                            ?.scrollIntoView({
-                              behavior: "smooth",
-                              block: "start",
-                            });
-                        });
-                      }}
-                      className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-left text-sm transition hover:border-orange-400/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    >
-                      <span>{category}</span>
-
-                      <span
-                        aria-hidden="true"
-                        className="text-orange-400"
-                      >
-                        →
-                      </span>
-                    </button>
-                  </li>
-                ))}
-            </ul>
+        <div className="mx-auto grid max-w-7xl gap-9 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-400">
+              Full-Service Agency
+            </p>
+            <h2
+              id="portfolio-services"
+              className="mt-3 max-w-lg text-2xl font-bold leading-tight tracking-tight sm:text-4xl"
+            >
+              Advertising, marketing, media and digital solutions
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+              Union Add combines traditional advertising, modern digital
+              marketing, technology, creative production and media solutions
+              to help businesses build visibility, communicate effectively
+              and reach the right audiences.
+            </p>
           </div>
+
+          <ul className="grid gap-2.5 sm:grid-cols-2">
+            {categories
+              .filter((category) => category !== "All")
+              .map((category) => (
+                <li key={category}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveCategory(category);
+                      requestAnimationFrame(() => {
+                        document
+                          .getElementById("portfolio-projects")
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                      });
+                    }}
+                    className="flex min-h-14 w-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-left text-sm font-medium transition hover:border-orange-400/50 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+                  >
+                    <span>{category}</span>
+                    <span aria-hidden="true" className="shrink-0 text-orange-400">
+                      →
+                    </span>
+                  </button>
+                </li>
+              ))}
+          </ul>
         </div>
       </section>
 
       {/* CTA */}
       <section
         aria-labelledby="portfolio-cta"
-        className="px-6 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="px-4 py-12 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
       >
-        <div className="mx-auto max-w-5xl rounded-[2rem] bg-orange-500 px-7 py-12 text-center text-white shadow-2xl sm:px-12 lg:py-16">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
-            Start Your Project
-          </p>
-
-          <h2
-            id="portfolio-cta"
-            className="mx-auto mt-4 max-w-3xl text-3xl font-bold sm:text-4xl lg:text-5xl"
-          >
-            Ready to build something that stands out?
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Tell Union Add what you want to achieve and our team can
-            help plan the right advertising, digital, media or creative
-            solution for your business.
-          </p>
-
-          <Link
-            href="/get-a-quote"
-            className="mt-8 inline-flex rounded-full bg-[#071A2E] px-7 py-3.5 font-semibold text-white transition hover:bg-white hover:text-[#071A2E] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-500"
-          >
-            Get a Free Quote
-          </Link>
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[1.75rem] bg-orange-500 px-6 py-12 text-center text-white shadow-[0_22px_60px_rgba(249,115,22,0.22)] sm:px-12 sm:py-16 lg:py-20">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-28 h-64 w-64 rounded-full border-[45px] border-white/10"
+          />
+          <div className="relative">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/85">
+              Start Your Project
+            </p>
+            <h2
+              id="portfolio-cta"
+              className="mx-auto mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
+            >
+              Ready to build something that stands out?
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-lg">
+              Tell Union Add what you want to achieve and our team can help
+              plan the right advertising, digital, media or creative solution
+              for your business.
+            </p>
+            <Link
+              href="/get-a-quote"
+              className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#071A2E] px-7 py-3 font-bold text-white transition hover:bg-white hover:text-[#071A2E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
+            >
+              Get a Free Quote <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

@@ -1,86 +1,108 @@
-"use client";
 
 import Link from "next/link";
+
 import {
   HiOutlineMapPin,
   HiOutlineEnvelope,
   HiOutlinePhone,
   HiOutlineClock,
 } from "react-icons/hi2";
+
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <main className="bg-white dark:bg-[#070707] text-black dark:text-white">
+    <main className="min-h-screen w-full min-w-0 overflow-x-clip bg-white text-black dark:bg-[#070707] dark:text-white">
 
-      {/* Hero */}
-      <section  aria-labelledby="contact-heading" className="py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      {/* HERO */}
+      <section
+        aria-labelledby="contact-heading"
+        className="py-14 sm:py-18 md:py-24"
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 
-          <p className="mt-10 uppercase tracking-[4px] text-orange-500 font-medium">
+          <p className="mt-10 text-xs font-medium uppercase tracking-[3px] text-orange-500 sm:mt-10 sm:text-sm sm:tracking-[4px]">
             Contact Us
           </p>
 
-          <h1  id="contact-heading" className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
-            Let's Build Something
+          <h1
+            id="contact-heading"
+            className="mx-auto mt-5 max-w-5xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            Let&apos;s Build Something
             <span className="text-orange-500"> Amazing</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-            Whether you're launching a new brand, planning a marketing campaign,
-            or building a digital product, our team is ready to help.
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base md:text-lg dark:text-gray-400">
+            Whether you&apos;re launching a new brand,
+            planning a marketing campaign, or building
+            a digital product, our team is ready to help.
           </p>
 
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section aria-labelledby="contact-information" className="pb-20">
-        <div className="max-w-7xl mx-auto px-6">
-          
-          <h2
-            id="contact-information"
-            className="sr-only"
-          >
+      {/* CONTACT INFORMATION */}
+      <section
+        aria-labelledby="contact-information"
+        className="pb-14 sm:pb-16 md:pb-20"
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+
+          <h2 id="contact-information" className="sr-only">
             Contact Information
           </h2>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
 
-            {/* Office */}
-            <article className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <HiOutlineMapPin aria-hidden="true" className="text-4xl text-orange-500 mb-5" />
+            {/* OFFICE */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-xl font-semibold mb-3">
+              <HiOutlineMapPin
+                aria-hidden="true"
+                className="mb-5 h-10 w-10 text-orange-500"
+              />
+
+              <h3 className="mb-3 text-xl font-semibold">
                 Office
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
                 Lahore, Pakistan
               </p>
+
             </article>
 
-            {/* Email */}
-            <article className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <HiOutlineEnvelope aria-hidden="true" className="text-4xl text-orange-500 mb-5" />
+            {/* EMAIL */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-xl font-semibold mb-3">
+              <HiOutlineEnvelope
+                aria-hidden="true"
+                className="mb-5 h-10 w-10 text-orange-500"
+              />
+
+              <h3 className="mb-3 text-xl font-semibold">
                 Email
               </h3>
 
               <a
                 href="mailto:info@unionadd.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-orange-500"
+                className="inline-block max-w-full break-all rounded-sm text-sm leading-7 text-gray-600 transition-colors hover:text-orange-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-500 sm:text-base dark:text-gray-400 dark:hover:text-orange-400"
               >
-                info@unionadd.com
+                union.add@gmail.com
               </a>
+
             </article>
 
-            {/* Phone */}
-            <article className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <HiOutlinePhone aria-hidden="true" className="text-4xl text-orange-500 mb-5" />
+            {/* PHONE */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-xl font-semibold mb-3">
+              <HiOutlinePhone
+                aria-hidden="true"
+                className="mb-5 h-10 w-10 text-orange-500"
+              />
+
+              <h3 className="mb-3 text-xl font-semibold">
                 Phone
               </h3>
 
@@ -90,49 +112,67 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label="Chat with Union Add on WhatsApp"
                 title="Chat with Union Add on WhatsApp"
-                className="inline-flex items-center justify-center text-green-500 hover:text-green-600 transition-colors duration-300"
+                className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm text-sm font-semibold text-green-500 transition-colors duration-300 hover:text-green-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-500 sm:text-base"
               >
-                <FaWhatsapp className="h-6 w-6" aria-hidden="true" />
-                 <b className="ml-2">+92-321-1234560</b>
+                <FaWhatsapp
+                  aria-hidden="true"
+                  className="h-6 w-6 shrink-0"
+                />
+
+                <span className="break-words">
+                  +92-321-1234560
+                </span>
               </a>
 
             </article>
 
-            {/* Hours */}
-            <article className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <HiOutlineClock aria-hidden="true" className="text-4xl text-orange-500 mb-5" />
+            {/* WORKING HOURS */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-xl font-semibold mb-3">
+              <HiOutlineClock
+                aria-hidden="true"
+                className="mb-5 h-10 w-10 text-orange-500"
+              />
+
+              <h3 className="mb-3 text-xl font-semibold">
                 Working Hours
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
                 Monday – Sunday
                 <br />
                 9:00 AM – 10:00 PM
               </p>
+
             </article>
 
           </div>
-
         </div>
       </section>
-            
-      {/* Google Map */}
-      <section className="pb-24" aria-labelledby="office-location">
-        <div className="max-w-7xl mx-auto px-6">
 
-          <div className="mb-12 text-center">
-            <p className="uppercase tracking-[4px] text-orange-500">
+      {/* GOOGLE MAP */}
+      <section
+        aria-labelledby="office-location"
+        className="pb-16 sm:pb-20 md:pb-24"
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+
+          <div className="mb-8 text-center sm:mb-12">
+
+            <p className="text-xs uppercase tracking-[3px] text-orange-500 sm:text-base sm:tracking-[4px]">
               Visit Us
             </p>
 
-            <h2 id="office-location" className="mt-4 text-3xl md:text-5xl font-bold">
+            <h2
+              id="office-location"
+              className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-5xl"
+            >
               Find Our Office
             </h2>
+
           </div>
 
-          <div className="overflow-hidden rounded-[32px] border border-gray-200 dark:border-zinc-800 shadow-xl">
+          <div className="w-full overflow-hidden rounded-3xl border border-gray-200 shadow-xl dark:border-zinc-800">
 
             <iframe
               title="Union Add Office Location"
@@ -142,131 +182,168 @@ export default function Contact() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              className="border-0"
+              className="block h-[280px] w-full border-0 sm:h-[360px] md:h-[440px] lg:h-[500px]"
             />
 
           </div>
-
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="pb-24" aria-labelledby="why-union-add">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* WHY CHOOSE US */}
+      <section
+        aria-labelledby="why-union-add"
+        className="pb-16 sm:pb-20 md:pb-24"
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-16">
 
-            <p className="uppercase tracking-[4px] text-orange-500">
+            <p className="text-xs uppercase tracking-[3px] text-orange-500 sm:text-base sm:tracking-[4px]">
               Why Union Add
             </p>
 
-            <h2 id="why-union-add" className="mt-4 text-3xl md:text-5xl font-bold">
+            <h2
+              id="why-union-add"
+              className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-5xl"
+            >
               Trusted Since 2006
             </h2>
 
-            <p className="mt-5 text-gray-600 dark:text-gray-400">
-              We combine creativity, technology and strategy to deliver
-              measurable business growth for brands across Pakistan.
+            <p className="mt-5 text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
+              We combine creativity, technology and strategy
+              to deliver measurable business growth for
+              brands across Pakistan.
             </p>
 
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8" role="list">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3 md:gap-8">
 
-            <article role="listitem" className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <div className="text-5xl mb-5">⚡</div>
+            {/* FAST RESPONSE */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-2xl font-semibold mb-4">
+              <div aria-hidden="true" className="mb-5 text-5xl">
+                ⚡
+              </div>
+
+              <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
                 Fast Response
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400">
-                We respond quickly to enquiries and keep communication clear
-                throughout every project.
+              <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
+                We respond quickly to enquiries and keep
+                communication clear throughout every project.
               </p>
+
             </article>
 
-            <article role="listitem" className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <div className="text-5xl mb-5">🎯</div>
+            {/* STRATEGIC SOLUTIONS */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-2xl font-semibold mb-4">
+              <div aria-hidden="true" className="mb-5 text-5xl">
+                🎯
+              </div>
+
+              <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
                 Strategic Solutions
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400">
-                Every campaign is designed around your business goals to
-                maximize return on investment.
+              <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
+                Every campaign is designed around your
+                business goals to maximize return on investment.
               </p>
+
             </article>
 
-            <article role="listitem" className="rounded-3xl border border-gray-200 dark:border-zinc-800 p-8 hover:border-orange-500 transition">
-              <div aria-hidden="true" className="text-5xl mb-5">🤝</div>
+            {/* LONG-TERM PARTNERSHIP */}
+            <article className="min-w-0 rounded-3xl border border-gray-200 p-6 transition-colors duration-300 hover:border-orange-500 sm:p-8 dark:border-zinc-800 dark:hover:border-orange-500">
 
-              <h3 className="text-2xl font-semibold mb-4">
+              <div aria-hidden="true" className="mb-5 text-5xl">
+                🤝
+              </div>
+
+              <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
                 Long-Term Partnership
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400">
-                We work as an extension of your team, building relationships
-                based on trust, quality and measurable results.
+              <p className="text-sm leading-7 text-gray-600 sm:text-base dark:text-gray-400">
+                We work as an extension of your team,
+                building relationships based on trust,
+                quality and measurable results.
               </p>
+
             </article>
 
           </div>
-
         </div>
       </section>
-            {/* CTA */}
-      <section className="pb-24">
-        <div className="max-w-7xl mx-auto px-6">
+
+      {/* CTA */}
+      <section className="pb-16 sm:pb-20 md:pb-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div
             className="
-              rounded-[40px]
+              rounded-3xl
               bg-gradient-to-r
               from-orange-500
               via-orange-600
               to-orange-700
+              px-5
+              py-12
+              text-center
               text-white
-              px-8
-              py-16
+              sm:rounded-[40px]
+              sm:px-8
+              sm:py-16
               md:px-16
               md:py-20
-              text-center
             "
           >
 
-            <p className="uppercase tracking-[4px] text-orange-100">
+            <p className="text-xs uppercase tracking-[3px] text-orange-100 sm:text-base sm:tracking-[4px]">
               Ready to Grow?
             </p>
 
-            <h2 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
-              Let's Create Something
-              <br />
+            <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
+              Let&apos;s Create Something
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
               Extraordinary Together
             </h2>
 
-            <p className="mt-6 max-w-2xl mx-auto text-orange-100 text-lg">
-              Whether you need advertising, branding, digital marketing,
-              web development or media buying, Union Add is ready to
-              turn your vision into results.
+            <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-orange-100 sm:text-base md:text-lg">
+              Whether you need advertising, branding,
+              digital marketing, web development or media
+              buying, Union Add is ready to turn your
+              vision into results.
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-5">
+            <div className="mt-8 flex flex-col items-stretch justify-center gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
 
               <Link
                 href="/get-a-quote"
                 prefetch
                 aria-label="Request a project quote"
                 className="
-                  px-8
-                  py-4
+                  inline-flex
+                  min-h-12
+                  w-full
+                  items-center
+                  justify-center
                   rounded-full
                   bg-white
-                  text-black
+                  px-8
+                  py-4
+                  text-center
                   font-semibold
+                  text-black
+                  transition-colors
                   hover:bg-gray-100
-                  transition
+                  focus-visible:outline-2
+                  focus-visible:outline-offset-4
+                  focus-visible:outline-white
+                  sm:w-auto
                 "
               >
                 Request a Quote
@@ -280,32 +357,32 @@ export default function Contact() {
                 title="Chat with Union Add on WhatsApp"
                 className="
                   inline-flex
+                  min-h-12
+                  w-full
                   items-center
                   justify-center
-                  px-8
-                  py-4
                   rounded-full
                   border
                   border-white
+                  px-8
+                  py-4
+                  text-center
                   font-semibold
-                  hover:bg-white
-                  hover:text-black
                   transition-all
                   duration-300
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-white
-                  focus:ring-offset-2
-                  focus:ring-offset-black
+                  hover:bg-white
+                  hover:text-black
+                  focus-visible:outline-2
+                  focus-visible:outline-offset-4
+                  focus-visible:outline-white
+                  sm:w-auto
                 "
               >
                 Call Us
               </a>
 
             </div>
-
           </div>
-
         </div>
       </section>
 

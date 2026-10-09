@@ -118,4 +118,4 @@ export default function MessageBubble({
       </div>
     </motion.div>
   );
-}
+} 

@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Advertising & Digital Marketing Services | Union Add",
+  title: "Advertising & Digital Marketing Services",
   description:
     "Explore Union Add's professional advertising, branding, digital marketing, social media management, SEO, web development, creative design, video production, media buying, and business growth solutions in Pakistan.",
 
