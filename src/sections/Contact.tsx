@@ -86,7 +86,7 @@ export default function Contact() {
               </h3>
 
               <a
-                href="mailto:info@unionadd.com"
+                href="mailto:union.add@gmail.com"
                 className="inline-block max-w-full break-all rounded-sm text-sm leading-7 text-gray-600 transition-colors hover:text-orange-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-500 sm:text-base dark:text-gray-400 dark:hover:text-orange-400"
               >
                 union.add@gmail.com
